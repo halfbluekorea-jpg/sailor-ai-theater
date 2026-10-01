@@ -44,10 +44,10 @@
   root.classList.add('intro-ready');
   if(reduced.matches){root.classList.add('intro-reduced');pauseAuto();return;}
   if(manual)return;
-  later(()=>root.classList.add('intro-selected'),1500);
-  later(()=>{root.classList.add('intro-burst');},2100);
-  later(()=>{leaving=true;root.classList.add('intro-leaving');},2440);
-  later(()=>cleanup(),2860);
+  later(()=>root.classList.add('intro-selected'),3500);
+  later(()=>{root.classList.add('intro-burst');},4100);
+  later(()=>{leaving=true;root.classList.add('intro-leaving');},4440);
+  later(()=>cleanup(),4860);
  }
  function open(isReplay=false){
   if(active)return;
