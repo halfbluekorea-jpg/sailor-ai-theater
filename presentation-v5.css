@@ -94,3 +94,5 @@ nav a:hover,nav a:focus-visible{border-bottom-color:var(--pink)}
 html{overflow-x:clip}.cast-star{left:12px}.cast-silver{right:18px;bottom:15px;width:135px}.film-frame video:focus-visible{outline:4px solid #c9347e;outline-offset:4px}
 
 .sticker-strip{display:flex;align-items:center;justify-content:space-around;gap:28px;margin:38px 0 0;padding:24px 30px;background:#16244b;border:1px solid #67759a}.sticker-strip svg{height:95px;width:18%;max-width:190px;transform:rotate(var(--tilt));overflow:hidden;filter:drop-shadow(4px 5px 2px #0003)}@media(max-width:650px){.sticker-strip{gap:12px;padding:18px 12px}.sticker-strip svg{height:65px;width:22%}}
+
+@media(min-width:651px){.cast{padding-bottom:165px}.cast-star{left:auto;right:27%;top:80px;width:95px}}
