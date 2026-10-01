@@ -8,20 +8,17 @@
  const skip=root.querySelector('.intro-skip');
  const hint=root.querySelector('.intro-hint');
  const replay=document.querySelector('.intro-replay');
- const seenKey='shining-phone-intro-v1';
  let active=false,leaving=false,started=false,manual=false,timers=[],priorFocus=null,fromReplay=false;
  function later(fn,ms){const id=setTimeout(fn,ms);timers.push(id);return id;}
  function clearTimers(){timers.forEach(clearTimeout);timers=[];}
- function remember(){try{localStorage.setItem(seenKey,'1');}catch(e){}}
  function unlock(){
   document.querySelectorAll('[data-intro-inert]').forEach(el=>{el.inert=false;el.removeAttribute('data-intro-inert');});
   document.documentElement.classList.remove('intro-pending');
  }
- function cleanup(mark=true){
+ function cleanup(){
   clearTimeout(window.__phoneIntroWatchdog);clearTimers();unlock();
   root.hidden=true;root.setAttribute('aria-hidden','true');root.className='';
   active=false;leaving=false;started=false;
-  if(mark)remember();
   if(fromReplay&&priorFocus?.isConnected)priorFocus.focus({preventScroll:true});
   else if(document.activeElement===root||root.contains(document.activeElement)){
    const home=document.querySelector('.hero h1');if(home){home.setAttribute('tabindex','-1');home.focus({preventScroll:true});}
@@ -65,10 +62,10 @@
   root.focus({preventScroll:true});
   const image=new Image();
   image.onload=start;
-  image.onerror=()=>cleanup(false);
+  image.onerror=()=>cleanup();
   image.src='assets/intro-phone-v6.png';
   if(image.complete&&image.naturalWidth)start();
-  else later(()=>{if(!started)cleanup(false);},1100);
+  else later(()=>{if(!started)cleanup();},1100);
  }
  yes.addEventListener('click',()=>finish(true));
  no.addEventListener('click',()=>finish(false));
@@ -90,7 +87,7 @@
  reduced.addEventListener('change',()=>{if(reduced.matches&&active)finish(false);});
  replay?.addEventListener('click',()=>open(true));
  if(document.documentElement.classList.contains('intro-pending')){
-  try{open();}catch(e){cleanup(false);}
+  try{open();}catch(e){cleanup();}
  }else{root.hidden=true;root.setAttribute('aria-hidden','true');}
  addEventListener('pagehide',()=>{if(active)cleanup();});
  addEventListener('pageshow',e=>{if(e.persisted&&active)cleanup();});
