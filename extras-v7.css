@@ -1,0 +1,50 @@
+/* Download & play: self-contained additions to the existing presentation. */
+nav .nav-game{color:#ffe5a6;white-space:nowrap}
+.digital-extras{background:#eedff2;color:#121e43}
+.digital-extras .section-heading h2 i{color:#a54280}
+.digital-extras .section-heading>p{max-width:330px}
+.extras-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:26px;align-items:stretch}
+.extra-card{min-width:0;position:relative;border:1px solid #122149;box-shadow:7px 8px 0 #15224718}
+.theme-extra{background:#fff5fb;display:grid;grid-template-columns:.72fr 1fr;gap:26px;padding:35px}
+.theme-device{position:relative;align-self:start;width:100%;max-width:210px;margin:0 auto;border:6px solid #171e3d;border-radius:24px;background:#0a1436;box-shadow:7px 9px 0 #c3b8d8}
+.theme-device img{display:block;width:100%;height:auto;border-radius:18px}
+.theme-device:before{content:'';position:absolute;top:8px;left:36%;width:28%;height:5px;background:#767b9c;border-radius:8px}
+.theme-device-label{position:absolute;top:20%;inset-inline:7%;text-align:center;color:#ffb8d5;font-size:clamp(14px,1.8vw,24px);font-weight:900;letter-spacing:-.5px;line-height:1.2}
+.theme-device-label i{font:italic clamp(12px,1.3vw,18px)/1.5 Georgia,serif;color:#ffdfae}
+.theme-device figcaption{position:absolute;top:calc(100% + 19px);left:-10px;right:-10px;font-size:8px;font-weight:700;letter-spacing:1px;text-align:center;color:#5b5574}
+.extra-copy{min-width:0}
+.extra-kicker{font-size:9px;font-weight:800;letter-spacing:1.6px;line-height:1.5;margin:0 0 20px;color:#8a3979}
+.extra-copy h3{font-size:clamp(28px,3.2vw,48px);font-weight:900;line-height:.96;letter-spacing:-1.8px;margin:0 0 20px}
+.extra-copy h3 i{color:#a54280}
+.extra-subtitle{font-size:15px;font-weight:700;line-height:1.6;margin:0 0 14px}
+.extra-description{font-size:13px;line-height:1.85;margin:0 0 22px;color:#555775;word-break:keep-all}
+.extra-meta{font-size:10px;letter-spacing:.5px;font-weight:700;margin:0 0 12px;color:#71627b}
+.extra-button{display:flex;gap:10px;align-items:center;justify-content:space-between;min-height:50px;padding:14px 16px;background:#142147;color:#fff4fa;font-weight:800;font-size:11px;letter-spacing:.8px;border:1px solid #142147;box-shadow:3px 3px 0 #efa8cd;transition:background .2s,transform .2s}
+.extra-button>span[lang]{font-size:10px;font-weight:500;letter-spacing:0;margin-left:auto}
+.extra-button>span[aria-hidden]{font-size:18px;line-height:1}
+.extra-button:hover{background:#7a3b78;transform:translateY(-2px)}
+.extra-button:focus-visible,.theme-help summary:focus-visible{outline:3px solid #a54280;outline-offset:5px}
+.extra-note{font-size:11px;line-height:1.85;color:#74667b;word-break:keep-all;margin:16px 0 0}
+.theme-help{margin-top:20px;border-top:1px solid #d8c8da}
+.theme-help summary{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 0;cursor:pointer;font-size:11px;font-weight:700;list-style:none}
+.theme-help summary::-webkit-details-marker{display:none}
+.theme-help p{font-size:11px;line-height:1.85;margin:0 0 14px;color:#5c5672;word-break:keep-all}
+.theme-help strong{overflow-wrap:anywhere}
+.game-extra{background:#121f47;color:#fff1fc;display:flex;flex-direction:column}
+.game-extra-art{padding:20px 28px 17px;background:linear-gradient(135deg,#24345c,#352344);border-bottom:1px solid #9182b8;position:relative;overflow:hidden}
+.game-status{display:flex;justify-content:space-between;gap:10px;font-size:8px;font-weight:700;letter-spacing:1.2px;color:#cdbce0}
+.game-moon{position:absolute;top:31px;right:24px;color:#f4cd80;font-size:76px;line-height:1;opacity:.65;transform:rotate(-15deg)}
+.game-pixel-party{display:flex;justify-content:center;align-items:flex-end;gap:12px;min-height:120px;position:relative;padding:25px 0 12px}
+.game-pixel-party .pixel{position:static;display:block;width:clamp(32px,3.7vw,51px);height:80px;object-fit:contain;animation:none;transform:none;filter:drop-shadow(3px 4px 0 #050d2b88)}
+.game-art-label{display:block;text-align:center;font:10px/1.5 monospace;letter-spacing:1.6px;color:#ffc2df}
+.game-extra .extra-copy{padding:29px 35px 32px}
+.game-extra .extra-kicker{color:#d4b4e2;margin-bottom:14px}
+.game-extra .extra-copy h3{font-size:clamp(34px,3.7vw,54px)}
+.game-extra .extra-copy h3 i{color:#ffaacf}
+.game-extra .extra-description{color:#d0c6e3}
+.game-extra .extra-button{background:#ffc2df;color:#142147;box-shadow:3px 3px 0 #9b8db9;border-color:#ffc2df;max-width:350px}
+.game-extra .extra-button:hover{background:#fff1fa}
+.game-extra .extra-note{color:#c4b8d6}
+@media(max-width:1150px){.extras-grid{grid-template-columns:1fr 1fr;gap:20px}.theme-extra{padding:28px 24px;grid-template-columns:1fr;gap:45px}.theme-device{max-width:142px}.theme-device-label{font-size:18px}.theme-device-label i{font-size:13px}.game-extra .extra-copy{padding:28px}.game-pixel-party{min-height:230px;align-items:center;gap:6px}.game-moon{top:66px;right:30px;font-size:118px}.game-pixel-party .pixel{width:18%;height:90px}.game-extra .extra-copy h3,.extra-copy h3{font-size:40px}}
+@media(max-width:650px){.extras-grid{grid-template-columns:1fr;gap:26px}.theme-extra{padding:26px;grid-template-columns:1fr;gap:45px}.theme-device{max-width:166px}.theme-device-label{font-size:20px}.theme-device-label i{font-size:15px}.extra-copy h3,.game-extra .extra-copy h3{font-size:43px}.extra-description{font-size:14px}.extra-note,.theme-help p{font-size:12px}.extra-button{min-height:52px;font-size:12px}.extra-button>span[lang]{font-size:11px}.game-extra-art{padding:20px 24px}.game-pixel-party{min-height:145px;align-items:flex-end;gap:13px}.game-pixel-party .pixel{width:42px;height:78px}.game-moon{top:37px;right:22px;font-size:95px}.game-extra .extra-copy{padding:28px 26px}.game-art-label{font-size:9px;letter-spacing:1px}}
+@media(prefers-reduced-motion:reduce){.extra-button{transition:none}.extra-button:hover{transform:none}}
