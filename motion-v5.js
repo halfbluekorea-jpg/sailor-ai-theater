@@ -1,7 +1,7 @@
 (() => {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
   if (reduce.matches || !('IntersectionObserver' in window)) return;
-  const targets = document.querySelectorAll('.section-heading,.cast-console,.world-copy,.interlude-title,.cat-screen,.coming-copy,.last-sections h2,.creator-bio>section,.creator-name,.creator-role,.faq-list details,.creator-signoff,.presentation-section .section-heading,.about-grid>* , .project-facts,.source-links,.story-visual,.story-acts article,.ending-note,.film-frame,.movie-links,.making-intro>* , .craft-grid article,.tone-heading,.palette-grid article,.continuity-note');
+  const targets = document.querySelectorAll('.extra-card,.section-heading,.cast-console,.world-copy,.interlude-title,.cat-screen,.coming-copy,.last-sections h2,.creator-bio>section,.creator-name,.creator-role,.faq-list details,.creator-signoff,.presentation-section .section-heading,.about-grid>* , .project-facts,.source-links,.story-visual,.story-acts article,.ending-note,.film-frame,.movie-links,.making-intro>* , .craft-grid article,.tone-heading,.palette-grid article,.continuity-note');
   const observer = new IntersectionObserver(entries => {
     for (const e of entries) {
       e.target.classList.toggle('is-visible', e.isIntersecting);
